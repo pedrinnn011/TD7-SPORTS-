@@ -1,112 +1,286 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>♥️TD7 SPORTS³🤍</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>♥️TD7 SPORTS³🤍 - Recrutamento</title>
   <style>
-    body {
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      padding: 0;
+    }
+
+    body {
       background-color: #000;
       color: #fff;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.5;
+      padding: 20px;
     }
 
     header {
-      background-color: #111;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      border-bottom: 2px solid #ff1a1a;
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 22px;
-      font-weight: bold;
-      color: white;
+    /* Logo grande */
+    header img {
+      width: 280px;
+      max-width: 90vw;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px auto;
+      filter: drop-shadow(0 0 10px #ff1a1a);
     }
 
-    .logo img {
-      height: 45px;
-      border-radius: 5px;
+    /* Nome da guilda com corações */
+    header .guilda-nome {
+      font-size: 36px;
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 0 10px #ff1a1a;
+      user-select: none;
     }
 
-    .logo-text {
-      color: white;
-      text-shadow: 0 0 8px #ff1a1a;
+    header .guilda-nome .heart-left {
+      color: #ff0000;
+      margin-right: 10px;
     }
 
-    .logo-text span {
-      color: #ff1a1a;
-      text-shadow: 0 0 8px #ff1a1a;
-    }
-
-    .heart-right {
-      font-size: 22px;
+    header .guilda-nome .heart-right {
+      color: #fff;
+      margin-left: 10px;
     }
 
     main {
-      padding: 30px;
-      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
-    h1 {
+    /* Formulário estilo neon vermelho */
+    form {
+      background: #111;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ff1a1a;
+      margin-bottom: 50px;
+    }
+
+    form h2 {
+      text-align: center;
       color: #ff1a1a;
-      font-size: 28px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff1a1a;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #ff1a1a;
       text-shadow: 0 0 8px #ff1a1a;
     }
 
-    .form-link {
-      background-color: #ff1a1a;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 15px #ff1a1a;
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 18px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 16px;
+      box-shadow: 0 0 10px #ff1a1a inset;
+      background: #222;
+      color: #fff;
+      resize: vertical;
     }
 
-    .form-link:hover {
+    textarea {
+      min-height: 80px;
+    }
+
+    button[type="submit"] {
+      background-color: #ff1a1a;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 0;
+      width: 100%;
+      cursor: pointer;
+      box-shadow: 0 0 20px #ff1a1a;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    button[type="submit"]:hover {
       background-color: #e60000;
     }
 
-    footer {
-      margin-top: 50px;
-      padding: 20px;
+    /* Regras */
+    section.regras {
       background-color: #111;
-      text-align: center;
-      color: #fff;
-      border-top: 1px solid #ff1a1a;
+      border-radius: 12px;
+      padding: 25px 30px;
+      box-shadow: 0 0 15px #ff1a1a;
+      margin-bottom: 50px;
     }
 
-    .highlight {
+    section.regras h2 {
       color: #ff1a1a;
-      font-weight: bold;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff1a1a;
+      text-align: center;
+    }
+
+    section.regras p {
+      margin-bottom: 12px;
+      font-size: 16px;
+      color: #ddd;
+    }
+
+    /* Top 3 */
+    section.top3 {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 25px 30px;
+      box-shadow: 0 0 15px #ff1a1a;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    section.top3 h2 {
+      color: #ff1a1a;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff1a1a;
+    }
+
+    section.top3 .placeholder {
+      color: #555;
+      font-style: italic;
+    }
+
+    /* Redes sociais */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer .social-buttons {
+      display: inline-flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    footer .social-buttons button {
+      background-color: #222;
+      border: 2px solid #ff1a1a;
+      color: #ff1a1a;
+      font-size: 20px;
+      padding: 12px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff1a1a;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      user-select: none;
+    }
+
+    footer .social-buttons button:hover {
+      background-color: #ff1a1a;
+      color: #fff;
+    }
+
+    footer p {
+      color: #888;
+      font-size: 14px;
+      user-select: none;
+    }
+
+    @media(max-width: 480px) {
+      header .guilda-nome {
+        font-size: 28px;
+      }
+
+      form, section.regras, section.top3 {
+        padding: 20px;
+        margin-bottom: 40px;
+      }
+
+      footer .social-buttons button {
+        font-size: 18px;
+        padding: 10px 16px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <span>♥️</span>
-      <img src="https://i.postimg.cc/Y9LWFWh5/IMG-20250630-WA0044.jpg" alt="Logo TD7 SPORTS³">
-      <div class="logo-text">TD7 <span>SPORTS³</span></div>
+    <img src="https://i.postimg.cc/Y9LWFWh5/IMG-20250630-WA0044.jpg" alt="Logo TD7 SPORTS³" />
+    <div class="guilda-nome">
+      <span class="heart-left">♥️</span>TD7 SPORTS³<span class="heart-right">🤍</span>
     </div>
-    <div class="heart-right">🤍</div>
   </header>
 
   <main>
-    <h1>💥 SEJA BEM-VINDO AO RECRUTAMENTO <span class="highlight">TD7 SPORTS³</span> ♥️</h1>
-    <p>PREENCHA O FORMULÁRIO E AGUARDE UM DOS NOSSOS ADM 🤍</p>
-    <a class="form-link" href="#">📋 FORMULÁRIO DE RECRUTAMENTO</a>
+    <form id="form-recrutamento" action="#" method="post">
+      <h2>Formulário de Recrutamento</h2>
+
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="nick">Nick:</label>
+      <input type="text" id="nick" name="nick" required />
+
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" min="10" max="100" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="discord">Discord (opcional):</label>
+      <input type="text" id="discord" name="discord" />
+
+      <label for="tempo-jogando">Tempo jogando (anos):</label>
+      <input type="number" id="tempo-jogando" name="tempo-jogando" min="0" max="50" required />
+
+      <label for="motivacao">Por que quer entrar na TD7 SPORTS³?</label>
+      <textarea id="motivacao" name="motivacao" required></textarea>
+
+      <button type="submit">Enviar Recrutamento</button>
+    </form>
+
+    <section class="regras">
+      <h2>Regras da Guilda</h2>
+      <p>1. Respeito sempre com todos os membros.</p>
+      <p>2. Proibido qualquer tipo de trapaça ou uso de cheats.</p>
+      <p>3. Participação ativa nos eventos da guilda.</p>
+      <p>4. Manter a comunicação clara e educada.</p>
+      <p>5. Seguir as orientações dos ADMs e líderes.</p>
+      <!-- Você pode editar ou adicionar regras aqui -->
+    </section>
+
+    <section class="top3">
+      <h2>Top 3 da Semana</h2>
+      <div class="placeholder">Em breve aqui estarão os melhores da semana!</div>
+    </section>
   </main>
 
   <footer>
-    ♥️ TD7 SPORTS³ - Orgulho, honra e sangue nos olhos. ⚡🤍
+    <div class="social-buttons">
+      <button title="Instagram">📸</button>
+      <button title="TikTok">🎵</button>
+      <button title="Discord">💬</button>
+      <!-- Botões prontos, sem links ainda -->
+    </div>
+    <p>♥️ TD7 SPORTS³ - Orgulho, honra e sangue nos olhos. ⚡🤍</p>
   </footer>
 </body>
-</html>
+  </html>
