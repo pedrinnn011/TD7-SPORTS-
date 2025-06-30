@@ -11,7 +11,7 @@
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background: #121212;
-      color: #e0e0e0;
+      color: #ffffff;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -38,64 +38,49 @@
     }
 
     h1 {
-      color: #00ff44; /* verde neon */
       font-weight: 700;
       font-size: 2rem;
       margin-bottom: 10px;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 2px;
-      text-shadow:
-        0 0 5px #00ff44,
-        0 0 10px #00ff44,
-        0 0 20px #00ff44,
-        0 0 40px #00ff44;
+      color: #ffffff;
     }
 
-    p.guild-description {
-      text-align: center;
-      font-size: 1rem;
+    .emoji-green {
+      color: #00ff44;
+      text-shadow: 0 0 5px #00ff44, 0 0 10px #00ff44, 0 0 20px #00ff44;
+    }
+
+    .emoji-yellow {
+      color: yellow;
+      text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 20px yellow;
+    }
+
+    h2 {
+      color: #00ff44;
+      text-shadow: 0 0 5px #00ff44, 0 0 10px #00ff44;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
       margin-bottom: 20px;
-      color: #a8ffa8;
-      font-weight: 600;
-      text-shadow:
-        0 0 3px #00ff44,
-        0 0 8px #00ff44;
-      line-height: 1.4;
-    }
-
-    p.requisitos {
-      text-align: left;
       font-size: 1rem;
-      margin-bottom: 30px;
-      color: #a8ffa8;
-      font-weight: 600;
-      text-shadow:
-        0 0 3px #00ff44,
-        0 0 8px #00ff44;
-      line-height: 1.5;
-      background: #001a00cc;
-      padding: 15px 20px;
-      border-radius: 12px;
-      box-shadow:
-        0 0 10px #00ff44,
-        0 0 25px #00ff44 inset;
+      line-height: 1.6;
     }
 
     p.intro {
       text-align: center;
-      font-size: 1.1rem;
-      margin-bottom: 30px;
       color: #ccffcc;
       font-weight: 600;
-      text-shadow:
-        0 0 4px #00ff44;
+      text-shadow: 0 0 4px #00ff44;
     }
 
     form {
       background: #0d0d0d;
       border-radius: 15px;
-      padding: 30px 30px 40px;
+      padding: 30px;
       box-shadow:
         0 0 10px #00ff44,
         0 0 20px #00ff44,
@@ -107,8 +92,7 @@
       margin-bottom: 8px;
       font-weight: 600;
       color: #a8ffa8;
-      text-shadow:
-        0 0 3px #00ff44;
+      text-shadow: 0 0 3px #00ff44;
     }
 
     input[type="text"],
@@ -122,23 +106,16 @@
       border-radius: 10px;
       font-size: 1rem;
       background: #121212;
-      color: #ccffcc;
+      color: #ffffff;
       text-shadow: 0 0 3px #00ff44;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 0 6px #00993344;
     }
 
-    input[type="text"]:focus,
-    input[type="number"]:focus,
-    input[type="tel"]:focus,
-    select:focus {
-      border-color: #00ff44;
+    input:focus {
       outline: none;
       background: #001a00;
-      box-shadow:
-        0 0 8px #00ff44,
-        0 0 20px #00ff44;
-      color: #e0ffe0;
+      box-shadow: 0 0 8px #00ff44, 0 0 20px #00ff44;
+      color: #ffffff;
     }
 
     .radio-group {
@@ -146,19 +123,15 @@
     }
 
     .radio-group label {
-      font-weight: 600;
       margin-right: 20px;
       cursor: pointer;
       color: #a8ffa8;
-      text-shadow:
-        0 0 3px #00ff44;
+      text-shadow: 0 0 3px #00ff44;
     }
 
     .radio-group input[type="radio"] {
       margin-right: 6px;
-      cursor: pointer;
       accent-color: #00ff44;
-      filter: drop-shadow(0 0 1px #00ff44);
     }
 
     .guildas-group {
@@ -172,31 +145,22 @@
       cursor: pointer;
       border-radius: 10px;
       padding: 10px 15px;
-      user-select: none;
       background: #111;
       color: #99ff99;
-      text-shadow:
-        0 0 3px #00ff44;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      box-shadow:
-        0 0 6px #00660044;
+      text-shadow: 0 0 3px #00ff44;
+      box-shadow: 0 0 6px #00660044;
     }
 
     .guildas-group input[type="radio"] {
       margin-right: 12px;
-      cursor: pointer;
       accent-color: #00ff44;
     }
 
     .guildas-group input[type="radio"]:checked + label {
       background-color: #002200;
-      box-shadow:
-        0 0 10px 3px #00ff44,
-        0 0 30px 8px #00ff44 inset;
-      font-weight: 700;
+      box-shadow: 0 0 10px 3px #00ff44, 0 0 30px 8px #00ff44 inset;
       color: #bfffbb;
-      text-shadow:
-        0 0 8px #00ff44;
+      text-shadow: 0 0 8px #00ff44;
     }
 
     button[type="submit"] {
@@ -209,41 +173,32 @@
       padding: 16px;
       border-radius: 14px;
       cursor: pointer;
-      box-shadow:
-        0 0 10px #00ff44,
-        0 0 25px #00ff44 inset;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      text-shadow:
-        0 0 10px #006600;
+      box-shadow: 0 0 10px #00ff44, 0 0 25px #00ff44 inset;
+      text-shadow: 0 0 10px #006600;
     }
 
     button[type="submit"]:hover {
       background: #00cc33;
       color: #001900;
-      box-shadow:
-        0 0 20px #00ff44,
-        0 0 40px #00ff44 inset;
+      box-shadow: 0 0 20px #00ff44, 0 0 40px #00ff44 inset;
     }
 
     footer {
       background: #000;
       color: #a8ffa8;
       text-align: center;
-      padding: 20px 15px;
+      padding: 20px;
       font-size: 1rem;
       border-top: 3px solid #00ff44;
       margin-top: auto;
-      text-shadow:
-        0 0 4px #00ff44;
+      text-shadow: 0 0 4px #00ff44;
     }
 
     footer a {
       color: #00ff44;
       text-decoration: none;
       font-weight: 700;
-      margin-left: 5px;
-      text-shadow:
-        0 0 5px #00ff44;
+      text-shadow: 0 0 5px #00ff44;
     }
 
     footer a:hover {
@@ -255,11 +210,6 @@
       line-height: 1.5;
       font-weight: 700;
     }
-
-    /* emojis no título e texto */
-    .emoji {
-      font-weight: 700;
-    }
   </style>
 </head>
 <body>
@@ -267,37 +217,41 @@
     <img src="https://i.postimg.cc/c4Y0D05F/TD7-SPORTS-20250629-232015.jpg" alt="Logo TD7 SPORTS ³" />
   </header>
   <main>
-    <h1><span class="emoji">💚⚡</span> Recrutamento TD7 SPORTS ³</h1>
-    <p class="guild-description">
+    <h1>
+      <span class="emoji-green">💚</span>
+      <span class="emoji-yellow">⚡</span>
+      Recrutamento TD7 SPORTS ³
+    </h1>
+
+    <h2>Sobre a TD7 SPORTS ³</h2>
+    <p>
       TD7 SPORTS ³ é uma guilda focada na união, diversão e crescimento coletivo. Nosso foco principal é a honra, rank, o desenvolvimento da comunidade e o apoio mútuo entre os membros. Valorizamos respeito, amizade e participação ativa em várias modalidades de jogos. Venha fazer parte da nossa família e crescer junto!
     </p>
-    <p class="requisitos">
-      <strong>Requisitos para entrar na TD7 SPORTS ³:</strong><br />
-      • Respeito e educação com todos os membros<br />
-      • Participação ativa nas atividades da guilda<br />
-      • Manter o foco em honra, rank e crescimento coletivo<br />
-      • Ter WhatsApp para comunicação rápida<br />
+
+    <h2>Requisitos</h2>
+    <p>
       • Ter no mínimo 3k de honra
     </p>
+
     <p class="intro">
       🔰 <strong>Preencha o formulário abaixo e aguarde um dos nossos ADM</strong> 👇🏻
     </p>
 
-    <form action="#" method="POST" novalidate>
+    <form>
       <label for="nick">💚 NICK:</label>
-      <input type="text" id="nick" name="nick" placeholder="Seu nickname" required />
+      <input type="text" id="nick" name="nick" required />
 
       <label for="id">🔢 ID:</label>
-      <input type="number" id="id" name="id" placeholder="Seu ID" required />
+      <input type="number" id="id" name="id" required />
 
       <label for="idade">🤍 IDADE:</label>
-      <input type="number" id="idade" name="idade" placeholder="Sua idade" min="8" max="100" required />
+      <input type="number" id="idade" name="idade" required />
 
       <label for="patente">🛡️ PATENTE BR E CS:</label>
-      <input type="text" id="patente" name="patente" placeholder="Ex: Bronze, Prata, Ouro..." required />
+      <input type="text" id="patente" name="patente" required />
 
       <label>💳 POSSUI TROCA DE NICK?</label>
-      <div class="radio-group" aria-label="Troca de nick">
+      <div class="radio-group">
         <input type="radio" id="troca-sim" name="troca_nick" value="Sim" required />
         <label for="troca-sim">Sim</label>
         <input type="radio" id="troca-nao" name="troca_nick" value="Não" />
@@ -305,33 +259,34 @@
       </div>
 
       <label for="whatsapp">📱 WHATSAPP:</label>
-      <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 90000-0000" pattern="^?\d{2}?\s?\d{4,5}-?\d{4}$" required />
+      <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 90000-0000" required />
 
       <fieldset class="guildas-group">
         <legend>💚 QUAL GUILDA VOCÊ DESEJA ENTRAR?</legend>
 
         <input type="radio" id="guerra" name="guilda" value="Guerra de Guildas" required />
-        <label for="guerra" class="guilda-1">GUERRA DE GUILDAS</label>
+        <label for="guerra">GUERRA DE GUILDAS</label>
 
         <input type="radio" id="rank-honras" name="guilda" value="Rank e Honras" />
-        <label for="rank-honras" class="guilda-2">RANK E HONRAS</label>
+        <label for="rank-honras">RANK E HONRAS</label>
 
         <input type="radio" id="criadores" name="guilda" value="Criadores de Conteúdo" />
-        <label for="criadores" class="guilda-3">CRIADORES DE CONTEÚDO</label>
+        <label for="criadores">CRIADORES DE CONTEÚDO</label>
       </fieldset>
 
       <button type="submit">Enviar Recrutamento</button>
     </form>
   </main>
+
   <footer>
-    <div>  
-      Siga nosso Instagram: 
-      <a href="https://www.instagram.com/td7sports3" target="_blank" rel="noopener noreferrer">@td7sports3</a>
+    <div>
+      Siga nosso Instagram:
+      <a href="https://www.instagram.com/td7sports3" target="_blank">@td7sports3</a>
     </div>
-    <div class="leaders" style="margin-top: 10px;">
-      <strong>Líder TD7³:</strong> THEUS <br />
-      <strong>Vices TD7³:</strong> SHOTZZY &nbsp;&nbsp; LADSON
+    <div class="leaders">
+      <strong>Líder TD7³:</strong> THEUS<br />
+      <strong>Vices TD7³:</strong> SHOTZZY & LADSON
     </div>
   </footer>
 </body>
-          </html>
+    </html>
