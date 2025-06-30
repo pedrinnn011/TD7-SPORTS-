@@ -5,69 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>♥️TD7 SPORTS³🤍 - Recrutamento</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       background-color: #000;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      line-height: 1.5;
+      font-family: Arial, sans-serif;
+      color: white;
       padding: 20px;
     }
 
     header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     header img {
-      width: 280px;
-      max-width: 90vw;
-      height: auto;
-      display: block;
-      margin: 0 auto 10px auto;
-      filter: drop-shadow(0 0 10px #ff1a1a);
+      width: 500px;
+      max-width: 95vw;
+      filter: drop-shadow(0 0 15px #ff1a1a);
     }
 
-    header .guilda-nome {
+    .guilda-nome {
       font-size: 36px;
-      font-weight: 900;
-      color: #fff;
+      font-weight: bold;
       text-shadow: 0 0 10px #ff1a1a;
+      margin-top: 10px;
     }
 
-    header .guilda-nome .heart-left {
-      color: #ff0000;
-      margin-right: 10px;
+    .guilda-nome .heart-left {
+      color: red;
     }
 
-    header .guilda-nome .heart-right {
-      color: #fff;
-      margin-left: 10px;
-    }
-
-    main {
-      max-width: 700px;
-      margin: 0 auto;
+    .guilda-nome .heart-right {
+      color: white;
     }
 
     section {
       background-color: #111;
       border-radius: 12px;
-      padding: 25px 30px;
+      padding: 25px;
       box-shadow: 0 0 15px #ff1a1a;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     section h2 {
       color: #ff1a1a;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px #ff1a1a;
+      margin-bottom: 15px;
       text-align: center;
+      text-shadow: 0 0 10px #ff1a1a;
     }
 
     section p {
-      color: #ddd;
+      color: #ccc;
       margin-bottom: 10px;
     }
 
@@ -80,45 +73,51 @@
     label {
       color: #ff1a1a;
       font-weight: bold;
-      text-shadow: 0 0 8px #ff1a1a;
     }
 
     input[type="text"],
     input[type="number"],
     input[type="tel"] {
       padding: 10px;
-      border-radius: 8px;
-      border: none;
-      background-color: #222;
-      color: #fff;
-      box-shadow: inset 0 0 10px #ff1a1a;
+      border-radius: 10px;
+      background: #222;
+      color: white;
+      border: 1px solid #ff1a1a;
+      box-shadow: 0 0 10px #ff1a1a;
+    }
+
+    .radio-group,
+    .select-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .radio-group label,
+    .select-group label {
+      font-weight: normal;
+      color: #ddd;
+    }
+
+    input[type="radio"] {
+      margin-right: 8px;
     }
 
     button[type="submit"] {
       background-color: #ff1a1a;
-      color: #fff;
-      font-weight: bold;
-      padding: 12px;
       border: none;
+      padding: 12px;
       border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
       box-shadow: 0 0 15px #ff1a1a;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: 0.3s ease;
     }
 
     button[type="submit"]:hover {
       background-color: #e60000;
-    }
-
-    .top3 .placeholder {
-      color: #555;
-      text-align: center;
-      font-style: italic;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
     }
 
     .social-buttons {
@@ -126,7 +125,7 @@
       flex-direction: column;
       align-items: center;
       gap: 10px;
-      margin-bottom: 15px;
+      margin-top: 30px;
     }
 
     .social-buttons a button,
@@ -139,7 +138,7 @@
       border-radius: 30px;
       box-shadow: 0 0 15px #ff1a1a;
       cursor: pointer;
-      width: 220px;
+      width: 240px;
       transition: 0.3s ease;
     }
 
@@ -150,21 +149,23 @@
 
     .social-buttons button:hover:enabled {
       background-color: #ff1a1a;
-      color: #fff;
+      color: white;
     }
 
     footer p {
-      color: #aaa;
+      text-align: center;
+      margin-top: 20px;
       font-size: 14px;
+      color: #aaa;
     }
 
     @media(max-width: 480px) {
-      header .guilda-nome {
-        font-size: 28px;
+      header img {
+        width: 100%;
       }
 
-      section {
-        padding: 20px;
+      .guilda-nome {
+        font-size: 28px;
       }
 
       .social-buttons a button {
@@ -181,60 +182,67 @@
     </div>
   </header>
 
-  <main>
-    <section class="regras">
-      <h2>📜 Regras da Guilda</h2>
-      <p>1. Respeitar todos os membros.</p>
-      <p>2. Sem trapaças, hacks ou comportamentos tóxicos.</p>
-      <p>3. Participação nos treinos/eventos obrigatória.</p>
-      <p>4. Proibido spam e flood no grupo.</p>
-    </section>
+  <section>
+    <h2>🔥 Sobre a Guilda</h2>
+    <p>A TD7 SPORTS³ é uma guilda focada em competição, honra e desempenho. Trabalhamos com organização, respeito e buscamos sempre a evolução dos nossos membros.</p>
+  </section>
 
-    <section class="requisitos">
-      <h2>✅ Requisitos</h2>
-      <p>🔞 Ter no mínimo 12 anos.</p>
-      <p>⚔️ Ser ativo e participar dos treinos.</p>
-      <p>📲 Ter WhatsApp para comunicação.</p>
-      <p>🎮 Jogar com seriedade e respeito.</p>
-    </section>
+  <section>
+    <h2>✅ Requisitos</h2>
+    <p>• Ser ativo nas atividades da guilda</p>
+    <p>• Ter WhatsApp</p>
+    <p>• Jogar com seriedade e dedicação</p>
+  </section>
 
-    <section class="formulario">
-      <h2>📋 Formulário de Recrutamento</h2>
-      <form action="https://formsubmit.co/pedrocosta776622@gmail.com" method="POST">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="Nome" required>
+  <section>
+    <h2>📋 Formulário de Recrutamento</h2>
+    <form action="https://formsubmit.co/theuspmb@gmail.com" method="POST">
+      <!-- Campo oculto para enviar também para pedrocosta -->
+      <input type="hidden" name="_cc" value="pedrocosta776622@gmail.com">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
-        <label for="nick">Nick no jogo:</label>
-        <input type="text" id="nick" name="Nick" required>
+      <label for="nick">❤️ Nick:</label>
+      <input type="text" id="nick" name="Nick" required>
 
-        <label for="idade">Idade:</label>
-        <input type="number" id="idade" name="Idade" required min="8" max="100">
+      <label for="id">🔢 ID:</label>
+      <input type="text" id="id" name="ID" required>
 
-        <label for="whatsapp">WhatsApp:</label>
-        <input type="tel" id="whatsapp" name="WhatsApp" required placeholder="(DDD) 99999-9999">
+      <label for="idade">🤍 Idade:</label>
+      <input type="number" id="idade" name="Idade" required>
 
-        <button type="submit">Enviar Recrutamento</button>
+      <label for="patente">🛡️ Patente BR e CS:</label>
+      <input type="text" id="patente" name="Patente" required>
 
-        <!-- Configurações extras do FormSubmit -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-      </form>
-    </section>
+      <div class="radio-group">
+        <label>🪪 Possui troca de Nick?</label>
+        <label><input type="radio" name="Troca de Nick" value="Sim" required> Sim</label>
+        <label><input type="radio" name="Troca de Nick" value="Não"> Não</label>
+      </div>
 
-    <section class="top3">
-      <h2>🏆 Top 3 da Semana</h2>
-      <div class="placeholder">Em breve aqui estarão os destaques da semana!</div>
-    </section>
-  </main>
+      <label for="whatsapp">📱 WhatsApp:</label>
+      <input type="tel" id="whatsapp" name="WhatsApp" required placeholder="(00) 90000-0000">
+
+      <div class="select-group">
+        <label>💗 Qual guilda você deseja entrar?</label>
+        <label><input type="radio" name="Guilda Desejada" value="Guerra de Guildas" required> Guerra de Guildas</label>
+        <label><input type="radio" name="Guilda Desejada" value="Rank e Honras"> Rank e Honras</label>
+        <label><input type="radio" name="Guilda Desejada" value="Criadores de Conteúdo"> Criadores de Conteúdo</label>
+      </div>
+
+      <button type="submit">Enviar Recrutamento</button>
+    </form>
+  </section>
+
+  <div class="social-buttons">
+    <a href="https://www.instagram.com/td7.sports_ofc?igsh=bGo5b3pscGZ2bGk3" target="_blank">
+      <button>Instagram da ORG 📸</button>
+    </a>
+    <button disabled>Instagram da Guilda 🚧</button>
+  </div>
 
   <footer>
-    <div class="social-buttons">
-      <a href="https://www.instagram.com/td7.sports_ofc?igsh=bGo5b3pscGZ2bGk3" target="_blank">
-        <button title="Instagram da ORG">Instagram da ORG 📸</button>
-      </a>
-      <button title="Instagram da Guilda" disabled>Instagram da Guilda 🚧</button>
-    </div>
     <p>♥️ TD7 SPORTS³ - Orgulho, honra e sangue nos olhos. ⚡🤍</p>
   </footer>
 </body>
-        </html>
+</html>
