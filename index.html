@@ -1,290 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Recrutamento TD7 SPORTS ³</title>
+  <meta charset="UTF-8">
+  <title>♥️TD7 SPORTS³🤍</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: #121212;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
     }
 
     header {
-      background: #000;
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0 0 15px #009945;
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 2px solid #ff1a1a;
     }
 
-    header img {
-      max-width: 220px;
-      height: auto;
-      filter: drop-shadow(0 0 10px #00ff44);
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .logo img {
+      height: 45px;
+      border-radius: 5px;
+    }
+
+    .logo-text {
+      color: white;
+      text-shadow: 0 0 8px #ff1a1a;
+    }
+
+    .logo-text span {
+      color: #ff1a1a;
+      text-shadow: 0 0 8px #ff1a1a;
+    }
+
+    .heart-right {
+      font-size: 22px;
     }
 
     main {
-      flex: 1;
-      max-width: 480px;
-      margin: 30px auto 50px;
-      padding: 0 15px;
+      padding: 30px;
+      text-align: center;
     }
 
     h1 {
-      font-weight: 700;
-      font-size: 2rem;
+      color: #ff1a1a;
+      font-size: 28px;
       margin-bottom: 10px;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #ffffff;
+      text-shadow: 0 0 8px #ff1a1a;
     }
 
-    .emoji-green {
-      color: #00ff44;
-      text-shadow: 0 0 5px #00ff44, 0 0 10px #00ff44, 0 0 20px #00ff44;
-    }
-
-    .emoji-yellow {
-      color: yellow;
-      text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 20px yellow;
-    }
-
-    h2 {
-      color: #00ff44;
-      text-shadow: 0 0 5px #00ff44, 0 0 10px #00ff44;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      margin-bottom: 20px;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #ffffff;
-    }
-
-    p.intro {
-      text-align: center;
-      color: #ccffcc;
-      font-weight: 600;
-      text-shadow: 0 0 4px #00ff44;
-    }
-
-    form {
-      background: #0d0d0d;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 0 10px #00ff44, 0 0 20px #00ff44, 0 0 30px #00ff44 inset;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: #a8ffa8;
-      text-shadow: 0 0 3px #00ff44;
-    }
-
-    input[type="text"],
-    input[type="number"],
-    input[type="tel"],
-    select {
-      width: 100%;
-      padding: 12px 16px;
-      margin-bottom: 22px;
-      border: 2px solid #00ff44;
+    .form-link {
+      background-color: #ff1a1a;
+      color: white;
+      padding: 10px 20px;
       border-radius: 10px;
-      font-size: 1rem;
-      background: #121212;
-      color: #ffffff;
-      text-shadow: 0 0 3px #00ff44;
-      box-shadow: 0 0 6px #00993344;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 15px #ff1a1a;
     }
 
-    input:focus {
-      outline: none;
-      background: #001a00;
-      box-shadow: 0 0 8px #00ff44, 0 0 20px #00ff44;
-      color: #ffffff;
-    }
-
-    .radio-group {
-      margin-bottom: 25px;
-    }
-
-    .radio-group label {
-      margin-right: 20px;
-      cursor: pointer;
-      color: #a8ffa8;
-      text-shadow: 0 0 3px #00ff44;
-    }
-
-    .radio-group input[type="radio"] {
-      margin-right: 6px;
-      accent-color: #00ff44;
-    }
-
-    .guildas-group {
-      margin-bottom: 30px;
-    }
-
-    .guildas-group label {
-      display: block;
-      margin-bottom: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      border-radius: 10px;
-      padding: 10px 15px;
-      background: #111;
-      color: #99ff99;
-      text-shadow: 0 0 3px #00ff44;
-      box-shadow: 0 0 6px #00660044;
-    }
-
-    .guildas-group input[type="radio"] {
-      margin-right: 12px;
-      accent-color: #00ff44;
-    }
-
-    .guildas-group input[type="radio"]:checked + label {
-      background-color: #002200;
-      box-shadow: 0 0 10px 3px #00ff44, 0 0 30px 8px #00ff44 inset;
-      color: #bfffbb;
-      text-shadow: 0 0 8px #00ff44;
-    }
-
-    button[type="submit"] {
-      width: 100%;
-      background: #00ff44;
-      border: none;
-      color: #002200;
-      font-size: 1.3rem;
-      font-weight: 900;
-      padding: 16px;
-      border-radius: 14px;
-      cursor: pointer;
-      box-shadow: 0 0 10px #00ff44, 0 0 25px #00ff44 inset;
-      text-shadow: 0 0 10px #006600;
-    }
-
-    button[type="submit"]:hover {
-      background: #00cc33;
-      color: #001900;
-      box-shadow: 0 0 20px #00ff44, 0 0 40px #00ff44 inset;
+    .form-link:hover {
+      background-color: #e60000;
     }
 
     footer {
-      background: #000;
-      color: #a8ffa8;
-      text-align: center;
+      margin-top: 50px;
       padding: 20px;
-      font-size: 1rem;
-      border-top: 3px solid #00ff44;
-      margin-top: auto;
-      text-shadow: 0 0 4px #00ff44;
+      background-color: #111;
+      text-align: center;
+      color: #fff;
+      border-top: 1px solid #ff1a1a;
     }
 
-    footer a {
-      color: #00ff44;
-      text-decoration: none;
-      font-weight: 700;
-      text-shadow: 0 0 5px #00ff44;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .leaders {
-      margin-top: 10px;
-      line-height: 1.5;
-      font-weight: 700;
+    .highlight {
+      color: #ff1a1a;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://i.postimg.cc/c4Y0D05F/TD7-SPORTS-20250629-232015.jpg" alt="Logo TD7 SPORTS ³" />
+    <div class="logo">
+      <span>♥️</span>
+      <img src="https://i.postimg.cc/Y9LWFWh5/IMG-20250630-WA0044.jpg" alt="Logo TD7 SPORTS³">
+      <div class="logo-text">TD7 <span>SPORTS³</span></div>
+    </div>
+    <div class="heart-right">🤍</div>
   </header>
+
   <main>
-    <h1>
-      <span class="emoji-green">💚</span>
-      <span class="emoji-yellow">⚡</span>
-      Recrutamento TD7 SPORTS ³
-    </h1>
-
-    <h2>Sobre a TD7 SPORTS ³</h2>
-    <p>
-      TD7 SPORTS ³ é uma guilda focada na união, diversão e crescimento coletivo. Nosso foco principal é a honra, rank, o desenvolvimento da comunidade e o apoio mútuo entre os membros. Valorizamos respeito, amizade e participação ativa em várias modalidades de jogos. Venha fazer parte da nossa família e crescer junto!
-    </p>
-
-    <h2>Requisitos</h2>
-    <p>
-      • Ter no mínimo 3k de honra
-    </p>
-
-    <p class="intro">
-      🔰 <strong>Preencha o formulário abaixo e aguarde um dos nossos ADM</strong> 👇🏻
-    </p>
-
-    <form>
-      <label for="nick">💚 NICK:</label>
-      <input type="text" id="nick" name="nick" required />
-
-      <label for="id">🔢 ID:</label>
-      <input type="number" id="id" name="id" required />
-
-      <label for="idade">🤍 IDADE:</label>
-      <input type="number" id="idade" name="idade" required />
-
-      <label for="patente">🛡️ PATENTE BR E CS:</label>
-      <input type="text" id="patente" name="patente" required />
-
-      <label>💳 POSSUI TROCA DE NICK?</label>
-      <div class="radio-group">
-        <input type="radio" id="troca-sim" name="troca_nick" value="Sim" required />
-        <label for="troca-sim">Sim</label>
-        <input type="radio" id="troca-nao" name="troca_nick" value="Não" />
-        <label for="troca-nao">Não</label>
-      </div>
-
-      <label for="whatsapp">📱 WHATSAPP:</label>
-      <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 90000-0000" required />
-
-      <fieldset class="guildas-group">
-        <legend>💚 QUAL GUILDA VOCÊ DESEJA ENTRAR?</legend>
-
-        <input type="radio" id="guerra" name="guilda" value="Guerra de Guildas" required />
-        <label for="guerra">GUERRA DE GUILDAS</label>
-
-        <input type="radio" id="rank-honras" name="guilda" value="Rank e Honras" />
-        <label for="rank-honras">RANK E HONRAS</label>
-
-        <input type="radio" id="criadores" name="guilda" value="Criadores de Conteúdo" />
-        <label for="criadores">CRIADORES DE CONTEÚDO</label>
-      </fieldset>
-
-      <button type="submit">Enviar Recrutamento</button>
-    </form>
+    <h1>💥 SEJA BEM-VINDO AO RECRUTAMENTO <span class="highlight">TD7 SPORTS³</span> ♥️</h1>
+    <p>PREENCHA O FORMULÁRIO E AGUARDE UM DOS NOSSOS ADM 🤍</p>
+    <a class="form-link" href="#">📋 FORMULÁRIO DE RECRUTAMENTO</a>
   </main>
 
   <footer>
-    <div>
-      Siga nosso Instagram:
-      <a href="https://www.instagram.com/td7sports3" target="_blank">@td7sports3</a>
-    </div>
-    <div class="leaders">
-      <strong>Líder TD7³:</strong> THEUS<br />
-      <strong>Vices TD7³:</strong> SHOTZZY & LADSON
-    </div>
+    ♥️ TD7 SPORTS³ - Orgulho, honra e sangue nos olhos. ⚡🤍
   </footer>
 </body>
-  </html>
+</html>
