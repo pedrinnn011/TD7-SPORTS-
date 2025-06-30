@@ -10,8 +10,8 @@
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: #fff;
-      color: #111;
+      background: #121212;
+      color: #e0e0e0;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -21,11 +21,13 @@
       background: #000;
       padding: 20px 0;
       text-align: center;
+      box-shadow: 0 0 15px #009945;
     }
 
     header img {
-      max-width: 180px;
+      max-width: 160px;
       height: auto;
+      filter: drop-shadow(0 0 8px #00ff44);
     }
 
     main {
@@ -36,35 +38,77 @@
     }
 
     h1 {
-      color: #009945; /* verde TD7 */
+      color: #00ff44; /* verde neon */
       font-weight: 700;
       font-size: 2rem;
       margin-bottom: 10px;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 2px;
+      text-shadow:
+        0 0 5px #00ff44,
+        0 0 10px #00ff44,
+        0 0 20px #00ff44,
+        0 0 40px #00ff44;
+    }
+
+    p.guild-description {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #a8ffa8;
+      font-weight: 600;
+      text-shadow:
+        0 0 3px #00ff44,
+        0 0 8px #00ff44;
+      line-height: 1.4;
+    }
+
+    p.requisitos {
+      text-align: left;
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: #a8ffa8;
+      font-weight: 600;
+      text-shadow:
+        0 0 3px #00ff44,
+        0 0 8px #00ff44;
+      line-height: 1.5;
+      background: #001a00cc;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow:
+        0 0 10px #00ff44,
+        0 0 25px #00ff44 inset;
     }
 
     p.intro {
       text-align: center;
-      font-size: 1rem;
+      font-size: 1.1rem;
       margin-bottom: 30px;
-      color: #222;
+      color: #ccffcc;
       font-weight: 600;
+      text-shadow:
+        0 0 4px #00ff44;
     }
 
     form {
-      background: #f9f9f9;
-      border-radius: 12px;
-      padding: 25px 25px 35px;
-      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+      background: #0d0d0d;
+      border-radius: 15px;
+      padding: 30px 30px 40px;
+      box-shadow:
+        0 0 10px #00ff44,
+        0 0 20px #00ff44,
+        0 0 30px #00ff44 inset;
     }
 
     label {
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       font-weight: 600;
-      color: #333;
+      color: #a8ffa8;
+      text-shadow:
+        0 0 3px #00ff44;
     }
 
     input[type="text"],
@@ -72,112 +116,134 @@
     input[type="tel"],
     select {
       width: 100%;
-      padding: 10px 14px;
-      margin-bottom: 18px;
-      border: 2px solid #ddd;
-      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 22px;
+      border: 2px solid #00ff44;
+      border-radius: 10px;
       font-size: 1rem;
-      transition: border-color 0.3s ease;
+      background: #121212;
+      color: #ccffcc;
+      text-shadow: 0 0 3px #00ff44;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 6px #00993344;
     }
 
     input[type="text"]:focus,
     input[type="number"]:focus,
     input[type="tel"]:focus,
     select:focus {
-      border-color: #009945;
+      border-color: #00ff44;
       outline: none;
-      background: #f0fff5;
+      background: #001a00;
+      box-shadow:
+        0 0 8px #00ff44,
+        0 0 20px #00ff44;
+      color: #e0ffe0;
     }
 
     .radio-group {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .radio-group label {
       font-weight: 600;
-      margin-right: 15px;
+      margin-right: 20px;
       cursor: pointer;
-      color: #111;
+      color: #a8ffa8;
+      text-shadow:
+        0 0 3px #00ff44;
     }
 
     .radio-group input[type="radio"] {
       margin-right: 6px;
       cursor: pointer;
+      accent-color: #00ff44;
+      filter: drop-shadow(0 0 1px #00ff44);
     }
 
     .guildas-group {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     .guildas-group label {
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       font-weight: 600;
       cursor: pointer;
-      border-radius: 8px;
-      padding: 8px 12px;
+      border-radius: 10px;
+      padding: 10px 15px;
       user-select: none;
-      transition: background-color 0.3s ease;
+      background: #111;
+      color: #99ff99;
+      text-shadow:
+        0 0 3px #00ff44;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow:
+        0 0 6px #00660044;
     }
 
     .guildas-group input[type="radio"] {
-      margin-right: 10px;
+      margin-right: 12px;
       cursor: pointer;
-    }
-
-    /* cores alternadas das guildas */
-    .guilda-1 {
-      background: #009945;
-      color: white;
-    }
-
-    .guilda-2 {
-      background: #f0f0f0;
-      color: #111;
-    }
-
-    .guilda-3 {
-      background: #000;
-      color: #9f9f9f;
+      accent-color: #00ff44;
     }
 
     .guildas-group input[type="radio"]:checked + label {
-      box-shadow: 0 0 8px 3px #009945cc;
+      background-color: #002200;
+      box-shadow:
+        0 0 10px 3px #00ff44,
+        0 0 30px 8px #00ff44 inset;
       font-weight: 700;
+      color: #bfffbb;
+      text-shadow:
+        0 0 8px #00ff44;
     }
 
     button[type="submit"] {
       width: 100%;
-      background: #009945;
+      background: #00ff44;
       border: none;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 700;
-      padding: 14px;
-      border-radius: 10px;
+      color: #002200;
+      font-size: 1.3rem;
+      font-weight: 900;
+      padding: 16px;
+      border-radius: 14px;
       cursor: pointer;
-      transition: background-color 0.25s ease;
+      box-shadow:
+        0 0 10px #00ff44,
+        0 0 25px #00ff44 inset;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-shadow:
+        0 0 10px #006600;
     }
 
     button[type="submit"]:hover {
-      background: #007a34;
+      background: #00cc33;
+      color: #001900;
+      box-shadow:
+        0 0 20px #00ff44,
+        0 0 40px #00ff44 inset;
     }
 
     footer {
       background: #000;
-      color: #eee;
+      color: #a8ffa8;
       text-align: center;
       padding: 20px 15px;
-      font-size: 0.9rem;
-      border-top: 3px solid #009945;
+      font-size: 1rem;
+      border-top: 3px solid #00ff44;
       margin-top: auto;
+      text-shadow:
+        0 0 4px #00ff44;
     }
 
     footer a {
-      color: #009945;
+      color: #00ff44;
       text-decoration: none;
       font-weight: 700;
       margin-left: 5px;
+      text-shadow:
+        0 0 5px #00ff44;
     }
 
     footer a:hover {
@@ -185,8 +251,9 @@
     }
 
     .leaders {
-      margin-top: 8px;
-      line-height: 1.4;
+      margin-top: 10px;
+      line-height: 1.5;
+      font-weight: 700;
     }
 
     /* emojis no título e texto */
@@ -201,6 +268,17 @@
   </header>
   <main>
     <h1><span class="emoji">💚⚡</span> Recrutamento TD7 SPORTS ³</h1>
+    <p class="guild-description">
+      TD7 SPORTS ³ é uma guilda focada na união, diversão e crescimento coletivo. Nosso foco principal é a honra, rank, o desenvolvimento da comunidade e o apoio mútuo entre os membros. Valorizamos respeito, amizade e participação ativa em várias modalidades de jogos. Venha fazer parte da nossa família e crescer junto!
+    </p>
+    <p class="requisitos">
+      <strong>Requisitos para entrar na TD7 SPORTS ³:</strong><br />
+      • Respeito e educação com todos os membros<br />
+      • Participação ativa nas atividades da guilda<br />
+      • Manter o foco em honra, rank e crescimento coletivo<br />
+      • Ter WhatsApp para comunicação rápida<br />
+      • Ter no mínimo 3k de honra
+    </p>
     <p class="intro">
       🔰 <strong>Preencha o formulário abaixo e aguarde um dos nossos ADM</strong> 👇🏻
     </p>
@@ -256,4 +334,4 @@
     </div>
   </footer>
 </body>
-</html>
+          </html>
