@@ -5,12 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>♥️TD7 SPORTS³🤍 - Recrutamento</title>
   <style>
-    /* Reset básico */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background-color: #000;
@@ -25,7 +20,6 @@
       margin-bottom: 40px;
     }
 
-    /* Logo grande */
     header img {
       width: 280px;
       max-width: 90vw;
@@ -35,13 +29,11 @@
       filter: drop-shadow(0 0 10px #ff1a1a);
     }
 
-    /* Nome da guilda com corações */
     header .guilda-nome {
       font-size: 36px;
       font-weight: 900;
       color: #fff;
       text-shadow: 0 0 10px #ff1a1a;
-      user-select: none;
     }
 
     header .guilda-nome .heart-left {
@@ -59,149 +51,111 @@
       margin: 0 auto;
     }
 
-    /* Formulário estilo neon vermelho */
-    form {
-      background: #111;
-      padding: 25px 30px;
+    section {
+      background-color: #111;
       border-radius: 12px;
-      box-shadow: 0 0 20px #ff1a1a;
-      margin-bottom: 50px;
+      padding: 25px 30px;
+      box-shadow: 0 0 15px #ff1a1a;
+      margin-bottom: 40px;
     }
 
-    form h2 {
-      text-align: center;
+    section h2 {
       color: #ff1a1a;
       margin-bottom: 20px;
       text-shadow: 0 0 10px #ff1a1a;
+      text-align: center;
+    }
+
+    section p {
+      color: #ddd;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
     label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: bold;
       color: #ff1a1a;
+      font-weight: bold;
       text-shadow: 0 0 8px #ff1a1a;
     }
 
     input[type="text"],
     input[type="number"],
-    input[type="email"],
-    select,
-    textarea {
-      width: 100%;
-      padding: 10px 12px;
-      margin-bottom: 18px;
-      border: none;
+    input[type="tel"] {
+      padding: 10px;
       border-radius: 8px;
-      outline: none;
-      font-size: 16px;
-      box-shadow: 0 0 10px #ff1a1a inset;
-      background: #222;
+      border: none;
+      background-color: #222;
       color: #fff;
-      resize: vertical;
-    }
-
-    textarea {
-      min-height: 80px;
+      box-shadow: inset 0 0 10px #ff1a1a;
     }
 
     button[type="submit"] {
       background-color: #ff1a1a;
-      color: white;
+      color: #fff;
       font-weight: bold;
-      font-size: 18px;
+      padding: 12px;
       border: none;
       border-radius: 10px;
-      padding: 12px 0;
-      width: 100%;
+      box-shadow: 0 0 15px #ff1a1a;
       cursor: pointer;
-      box-shadow: 0 0 20px #ff1a1a;
-      transition: background-color 0.3s ease;
-      user-select: none;
+      transition: background 0.3s ease;
     }
 
     button[type="submit"]:hover {
       background-color: #e60000;
     }
 
-    /* Regras */
-    section.regras {
-      background-color: #111;
-      border-radius: 12px;
-      padding: 25px 30px;
-      box-shadow: 0 0 15px #ff1a1a;
-      margin-bottom: 50px;
-    }
-
-    section.regras h2 {
-      color: #ff1a1a;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px #ff1a1a;
-      text-align: center;
-    }
-
-    section.regras p {
-      margin-bottom: 12px;
-      font-size: 16px;
-      color: #ddd;
-    }
-
-    /* Top 3 */
-    section.top3 {
-      background-color: #111;
-      border-radius: 12px;
-      padding: 25px 30px;
-      box-shadow: 0 0 15px #ff1a1a;
-      margin-bottom: 50px;
-      text-align: center;
-    }
-
-    section.top3 h2 {
-      color: #ff1a1a;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px #ff1a1a;
-    }
-
-    section.top3 .placeholder {
+    .top3 .placeholder {
       color: #555;
+      text-align: center;
       font-style: italic;
     }
 
-    /* Redes sociais */
     footer {
       text-align: center;
       margin-top: 40px;
     }
 
-    footer .social-buttons {
-      display: inline-flex;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 20px;
+    .social-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
     }
 
-    footer .social-buttons button {
-      background-color: #222;
+    .social-buttons a button,
+    .social-buttons button {
+      background-color: #111;
       border: 2px solid #ff1a1a;
       color: #ff1a1a;
-      font-size: 20px;
-      padding: 12px 20px;
-      border-radius: 50px;
-      cursor: pointer;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 30px;
       box-shadow: 0 0 15px #ff1a1a;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      user-select: none;
+      cursor: pointer;
+      width: 220px;
+      transition: 0.3s ease;
     }
 
-    footer .social-buttons button:hover {
+    .social-buttons button[disabled] {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .social-buttons button:hover:enabled {
       background-color: #ff1a1a;
       color: #fff;
     }
 
     footer p {
-      color: #888;
+      color: #aaa;
       font-size: 14px;
-      user-select: none;
     }
 
     @media(max-width: 480px) {
@@ -209,14 +163,12 @@
         font-size: 28px;
       }
 
-      form, section.regras, section.top3 {
+      section {
         padding: 20px;
-        margin-bottom: 40px;
       }
 
-      footer .social-buttons button {
-        font-size: 18px;
-        padding: 10px 16px;
+      .social-buttons a button {
+        width: 100%;
       }
     }
   </style>
@@ -230,57 +182,59 @@
   </header>
 
   <main>
-    <form id="form-recrutamento" action="#" method="post">
-      <h2>Formulário de Recrutamento</h2>
-
-      <label for="nome">Nome completo:</label>
-      <input type="text" id="nome" name="nome" required />
-
-      <label for="nick">Nick:</label>
-      <input type="text" id="nick" name="nick" required />
-
-      <label for="idade">Idade:</label>
-      <input type="number" id="idade" name="idade" min="10" max="100" required />
-
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="discord">Discord (opcional):</label>
-      <input type="text" id="discord" name="discord" />
-
-      <label for="tempo-jogando">Tempo jogando (anos):</label>
-      <input type="number" id="tempo-jogando" name="tempo-jogando" min="0" max="50" required />
-
-      <label for="motivacao">Por que quer entrar na TD7 SPORTS³?</label>
-      <textarea id="motivacao" name="motivacao" required></textarea>
-
-      <button type="submit">Enviar Recrutamento</button>
-    </form>
-
     <section class="regras">
-      <h2>Regras da Guilda</h2>
-      <p>1. Respeito sempre com todos os membros.</p>
-      <p>2. Proibido qualquer tipo de trapaça ou uso de cheats.</p>
-      <p>3. Participação ativa nos eventos da guilda.</p>
-      <p>4. Manter a comunicação clara e educada.</p>
-      <p>5. Seguir as orientações dos ADMs e líderes.</p>
-      <!-- Você pode editar ou adicionar regras aqui -->
+      <h2>📜 Regras da Guilda</h2>
+      <p>1. Respeitar todos os membros.</p>
+      <p>2. Sem trapaças, hacks ou comportamentos tóxicos.</p>
+      <p>3. Participação nos treinos/eventos obrigatória.</p>
+      <p>4. Proibido spam e flood no grupo.</p>
+    </section>
+
+    <section class="requisitos">
+      <h2>✅ Requisitos</h2>
+      <p>🔞 Ter no mínimo 12 anos.</p>
+      <p>⚔️ Ser ativo e participar dos treinos.</p>
+      <p>📲 Ter WhatsApp para comunicação.</p>
+      <p>🎮 Jogar com seriedade e respeito.</p>
+    </section>
+
+    <section class="formulario">
+      <h2>📋 Formulário de Recrutamento</h2>
+      <form action="https://formsubmit.co/pedrocosta776622@gmail.com" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="Nome" required>
+
+        <label for="nick">Nick no jogo:</label>
+        <input type="text" id="nick" name="Nick" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="Idade" required min="8" max="100">
+
+        <label for="whatsapp">WhatsApp:</label>
+        <input type="tel" id="whatsapp" name="WhatsApp" required placeholder="(DDD) 99999-9999">
+
+        <button type="submit">Enviar Recrutamento</button>
+
+        <!-- Configurações extras do FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+      </form>
     </section>
 
     <section class="top3">
-      <h2>Top 3 da Semana</h2>
-      <div class="placeholder">Em breve aqui estarão os melhores da semana!</div>
+      <h2>🏆 Top 3 da Semana</h2>
+      <div class="placeholder">Em breve aqui estarão os destaques da semana!</div>
     </section>
   </main>
 
   <footer>
     <div class="social-buttons">
-      <button title="Instagram">📸</button>
-      <button title="TikTok">🎵</button>
-      <button title="Discord">💬</button>
-      <!-- Botões prontos, sem links ainda -->
+      <a href="https://www.instagram.com/td7.sports_ofc?igsh=bGo5b3pscGZ2bGk3" target="_blank">
+        <button title="Instagram da ORG">Instagram da ORG 📸</button>
+      </a>
+      <button title="Instagram da Guilda" disabled>Instagram da Guilda 🚧</button>
     </div>
     <p>♥️ TD7 SPORTS³ - Orgulho, honra e sangue nos olhos. ⚡🤍</p>
   </footer>
 </body>
-  </html>
+        </html>
