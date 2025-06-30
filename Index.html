@@ -1,1 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recrutamento TD7 SPORTS ³</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #000;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 180px;
+      height: auto;
+    }
+
+    main {
+      flex: 1;
+      max-width: 480px;
+      margin: 30px auto 50px;
+      padding: 0 15px;
+    }
+
+    h1 {
+      color: #009945; /* verde TD7 */
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    p.intro {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: #222;
+      font-weight: 600;
+    }
+
+    form {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 25px 25px 35px;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="tel"]:focus,
+    select:focus {
+      border-color: #009945;
+      outline: none;
+      background: #f0fff5;
+    }
+
+    .radio-group {
+      margin-bottom: 20px;
+    }
+
+    .radio-group label {
+      font-weight: 600;
+      margin-right: 15px;
+      cursor: pointer;
+      color: #111;
+    }
+
+    .radio-group input[type="radio"] {
+      margin-right: 6px;
+      cursor: pointer;
+    }
+
+    .guildas-group {
+      margin-bottom: 25px;
+    }
+
+    .guildas-group label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 8px;
+      padding: 8px 12px;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .guildas-group input[type="radio"] {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    /* cores alternadas das guildas */
+    .guilda-1 {
+      background: #009945;
+      color: white;
+    }
+
+    .guilda-2 {
+      background: #f0f0f0;
+      color: #111;
+    }
+
+    .guilda-3 {
+      background: #000;
+      color: #9f9f9f;
+    }
+
+    .guildas-group input[type="radio"]:checked + label {
+      box-shadow: 0 0 8px 3px #009945cc;
+      font-weight: 700;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      background: #009945;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.25s ease;
+    }
+
+    button[type="submit"]:hover {
+      background: #007a34;
+    }
+
+    footer {
+      background: #000;
+      color: #eee;
+      text-align: center;
+      padding: 20px 15px;
+      font-size: 0.9rem;
+      border-top: 3px solid #009945;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: #009945;
+      text-decoration: none;
+      font-weight: 700;
+      margin-left: 5px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .leaders {
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    /* emojis no título e texto */
+    .emoji {
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.postimg.cc/c4Y0D05F/TD7-SPORTS-20250629-232015.jpg" alt="Logo TD7 SPORTS ³" />
+  </header>
+  <main>
+    <h1><span class="emoji">💚⚡</span> Recrutamento TD7 SPORTS ³</h1>
+    <p class="intro">
+      🔰 <strong>Preencha o formulário abaixo e aguarde um dos nossos ADM</strong> 👇🏻
+    </p>
+
+    <form action="#" method="POST" novalidate>
+      <label for="nick">💚 NICK:</label>
+      <input type="text" id="nick" name="nick" placeholder="Seu nickname" required />
+
+      <label for="id">🔢 ID:</label>
+      <input type="number" id="id" name="id" placeholder="Seu ID" required />
+
+      <label for="idade">🤍 IDADE:</label>
+      <input type="number" id="idade" name="idade" placeholder="Sua idade" min="8" max="100" required />
+
+      <label for="patente">🛡️ PATENTE BR E CS:</label>
+      <input type="text" id="patente" name="patente" placeholder="Ex: Bronze, Prata, Ouro..." required />
+
+      <label>💳 POSSUI TROCA DE NICK?</label>
+      <div class="radio-group" aria-label="Troca de nick">
+        <input type="radio" id="troca-sim" name="troca_nick" value="Sim" required />
+        <label for="troca-sim">Sim</label>
+        <input type="radio" id="troca-nao" name="troca_nick" value="Não" />
+        <label for="troca-nao">Não</label>
+      </div>
+
+      <label for="whatsapp">📱 WHATSAPP:</label>
+      <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 90000-0000" pattern="^?\d{2}?\s?\d{4,5}-?\d{4}$" required />
+
+      <fieldset class="guildas-group">
+        <legend>💚 QUAL GUILDA VOCÊ DESEJA ENTRAR?</legend>
+
+        <input type="radio" id="guerra" name="guilda" value="Guerra de Guildas" required />
+        <label for="guerra" class="guilda-1">GUERRA DE GUILDAS</label>
+
+        <input type="radio" id="rank-honras" name="guilda" value="Rank e Honras" />
+        <label for="rank-honras" class="guilda-2">RANK E HONRAS</label>
+
+        <input type="radio" id="criadores" name="guilda" value="Criadores de Conteúdo" />
+        <label for="criadores" class="guilda-3">CRIADORES DE CONTEÚDO</label>
+      </fieldset>
+
+      <button type="submit">Enviar Recrutamento</button>
+    </form>
+  </main>
+  <footer>
+    <div>  
+      Siga nosso Instagram: 
+      <a href="https://www.instagram.com/td7sports3" target="_blank" rel="noopener noreferrer">@td7sports3</a>
+    </div>
+    <div class="leaders" style="margin-top: 10px;">
+      <strong>Líder TD7³:</strong> THEUS <br />
+      <strong>Vices TD7³:</strong> SHOTZZY &nbsp;&nbsp; LADSON
+    </div>
+  </footer>
+</body>
+</html>
